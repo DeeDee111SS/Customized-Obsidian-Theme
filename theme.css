@@ -8585,11 +8585,12 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
 
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] :is(.nav-file-title, .nav-folder.mod-root>.nav-folder-title)::before {
   content: " ";  
-  margin-left: calc(-1 * var(--size-4-5));
+  margin-left: -3px;
   width: var(--size-4-4);
   height: var(--size-4-4);  
   opacity: var(--icon-opacity);
   background-color: rgb(105, 144, 185);  
+  position: absolute;
 }
 
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .tree-item-icon.collapse-icon::after {
@@ -8602,8 +8603,8 @@ body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .
   height: var(--size-4-4); 
 }
 
-.nav-folder-title-content {
-  margin-left: 13px;
+.nav-folder-title-content, .nav-file-title-content {
+  margin-left: 17px;
 }
 
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .is-collapsed .tree-item-icon.collapse-icon::after {
@@ -8613,13 +8614,16 @@ body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .
 
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title::before {
   -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333Z'/%3e%3cpath d='M9.333 1.333v4h4'/%3e%3c/g%3e%3c/svg%3e");
+  margin-left: 17px;
 }
 
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".canvas"]::before {
   -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M6 2H2.667A.667.667 0 0 0 2 2.667v4.666c0 .369.298.667.667.667H6a.667.667 0 0 0 .667-.667V2.667A.667.667 0 0 0 6 2Zm7.333 0H10a.667.667 0 0 0-.667.667v2c0 .368.299.666.667.666h3.333A.667.667 0 0 0 14 4.667v-2A.667.667 0 0 0 13.333 2Zm0 6H10a.667.667 0 0 0-.667.667v4.666c0 .368.299.667.667.667h3.333a.667.667 0 0 0 .667-.667V8.667A.667.667 0 0 0 13.333 8ZM6 10.667H2.667a.667.667 0 0 0-.667.666v2c0 .368.298.667.667.667H6a.667.667 0 0 0 .667-.667v-2A.667.667 0 0 0 6 10.667Z'/%3e%3c/svg%3e");
+  margin-left: 17px;
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
   margin-left: 0;
   margin-right: 0;
 }
+
